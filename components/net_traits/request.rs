@@ -313,7 +313,7 @@ impl RequestBuilder {
         request.credentials_mode = self.credentials_mode;
         request.use_url_credentials = self.use_url_credentials;
         request.cache_mode = self.cache_mode;
-        request.referrer = self.referrer.unwrap_or(Referrer::Client);
+        request.referrer = self.referrer.unwrap_or(Referrer::NoReferrer);
         request.referrer_policy = self.referrer_policy;
         request.redirect_mode = self.redirect_mode;
         let mut url_list = self.url_list;
